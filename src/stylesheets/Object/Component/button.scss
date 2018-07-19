@@ -1,0 +1,15 @@
+.btn {
+  border: 1px solid #fff;
+  padding: 10px 60px;
+  color: #fff !important;
+
+  &:hover {
+      text-decoration: none;
+    }
+  
+  &--primary {
+    background-color: #fff;
+    border-color: #0069aa;
+    color: #0069aa !important;
+  }
+}

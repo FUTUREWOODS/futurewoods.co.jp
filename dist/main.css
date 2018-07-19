@@ -1,0 +1,85 @@
+body.color02 #header {
+  background: #fff; }
+
+body.color02 #gnav {
+  background: #fff; }
+  body.color02 #gnav ul li:hover a {
+    color: #0069aa;
+    background: #fff;
+    border-bottom: solid 4px #0069aa; }
+  body.color02 #gnav ul li a {
+    background: #fff;
+    color: #000;
+    padding: 30px 20px;
+    box-sizing: border-box; }
+    body.color02 #gnav ul li a:hover {
+      background: #fff;
+      color: #0069aa;
+      border-bottom: solid 4px #0069aa; }
+  body.color02 #gnav ul li .sub-menu {
+    border: none; }
+    body.color02 #gnav ul li .sub-menu li:last-child {
+      border-bottom: none; }
+    body.color02 #gnav ul li .sub-menu li a {
+      background: #fff;
+      color: #0069aa;
+      padding: 10px 15px;
+      border-bottom: none; }
+      body.color02 #gnav ul li .sub-menu li a:hover {
+        background: #0069aa;
+        color: #fff; }
+
+body.color02 #main_visual {
+  background: no-repeat;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center; }
+
+.l-headerImage img {
+  width: 260px; }
+
+@media screen and (max-width: 1200px) {
+  #header-nav-btn a {
+    background: #fff; }
+  #header-nav-btn i {
+    color: #0069aa; }
+  #gnav-sp #header-cont-content li a:hover {
+    opacity: 0.5; }
+  #gnav-sp #header-cont-content li a:before {
+    font-family: initial;
+    content: initial;
+    position: initial;
+    left: initial;
+    top: initial; }
+  #gnav-sp {
+    background: #000;
+    background: rgba(0, 0, 0, 0.8); } }
+
+@media screen and (max-width: 767px) {
+  #header #logo {
+    float: left; }
+  .post-content h2 {
+    margin: 80px 0 32px -30px;
+    padding: 16px 16px 16px 20px; }
+  #gnav-sp {
+    background: #000;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center; }
+  #header-nav-btn {
+    display: block;
+    width: auto;
+    margin: 0 5px;
+    line-height: 92px;
+    float: right; }
+    #header-nav-btn a {
+      display: initial;
+      text-align: initial;
+      font-size: initial;
+      padding: initial;
+      line-height: initial;
+      background: initial;
+      width: initial; }
+    #header-nav-btn i {
+      font-size: 32px; }
+  .l-headerImage img {
+    width: 200px; } }
