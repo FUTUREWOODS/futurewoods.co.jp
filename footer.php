@@ -2,83 +2,95 @@
   <div class="footer-01">
     <div class="wrap">
 
-      <div id="footer-brand-area" class="row">
-        <div class="footer-logo gr6">
-        <?php
-        $logo_image = get_option('footer-logo');
-          if( isset($logo_image) && $logo_image !== '' ){
-        ?>
-          <img src="<?php echo get_option('footer-logo');?>" alt="<?php echo get_bloginfo('name'); ?>" />
-        <?php
-          }else{
-            echo get_bloginfo('name');
-          }
-        ?>
-        </div>
-        <div class="footer-address gr6">
-          <?php echo get_option('footer-address');?>
-        </div>
-      </div><!-- /footer-brand-area -->
+      <div class="i-footer">
+        <div class="row">
+          <div class="col-5">
+            <div id="footer-brand-area">
+              <div class="footer-logo mb-4">
+              <?php
+              $logo_image = get_option('footer-logo');
+                if( isset($logo_image) && $logo_image !== '' ){
+              ?>
+                <span class="l-footerImage">
+                  <img src="<?php echo get_option('footer-logo');?>" alt="<?php echo get_bloginfo('name'); ?>" />
+                </span>
+              <?php
+                }else{
+                  echo get_bloginfo('name');
+                }
+              ?>
+              </div>
+              <div class="footer-address mb-5">
+                <?php echo get_option('footer-address');?>
+              </div>
+              <p class="btn">
+                <a href="#">お問い合わせはこちら <i class="fas fa-chevron-right"></i></a>
+              </p>
+            </div><!-- /footer-brand-area -->
+          </div>
 
-      <div id="footer-content-area" class="row">
-        <div id="footer-list-area" class="gr6">
-          <div class="row">
+          <div class="col-7">
+            <div id="footer-content-area" class="row">
+              <div id="footer-list-area" class="gr6">
+                <div class="row">
 
-      <?php if( has_nav_menu( 'footer_nav' ) ){
-      //bzb_get_nav_menu_name();
-        echo '<div id="footer-cont-about" class="gr4">';
-        echo "<h4>" . get_option('footer_menu_title') . "</ph4>";
-        wp_nav_menu(
-          array(
-            'theme_location'  => 'footer_nav',
-            'menu_class'      => '',
-            'menu_id'         => 'fnav',
-            'container'       => 'nav',
-            'items_wrap'      => '<ul id="footer-nav" class="%2$s">%3$s</ul>'
-          )
-        );
-        echo '</div>';
-      } //if footer_nav
-      ?>
+            <?php if( has_nav_menu( 'footer_nav' ) ){
+            //bzb_get_nav_menu_name();
+              echo '<div id="footer-cont-about" class="gr4">';
+              echo "<h4>" . get_option('footer_menu_title') . "</ph4>";
+              wp_nav_menu(
+                array(
+                  'theme_location'  => 'footer_nav',
+                  'menu_class'      => '',
+                  'menu_id'         => 'fnav',
+                  'container'       => 'nav',
+                  'items_wrap'      => '<ul id="footer-nav" class="%2$s">%3$s</ul>'
+                )
+              );
+              echo '</div>';
+            } //if footer_nav
+            ?>
 
-    <?php if( has_nav_menu( 'global_nav' ) ){ ?>
+          <?php if( has_nav_menu( 'global_nav' ) ){ ?>
 
-            <div id="footer-cont-content" class="gr4">
-              <h4>ブログコンテンツ</h4>
-      <?php
-        wp_nav_menu(
-          array(
-            'theme_location'  => 'global_nav',
-            'menu_class'      => 'clearfix',
-            'menu_id'         => 'footer-gnav-ul',
-            'container'       => 'div',
-            'container_id'    => 'footer-gnav-container',
-            'container_class' => 'gnav-container'
-          )
-        );?>
-    </div>
-    <?php } ?>
+                  <div id="footer-cont-content" class="pt-3">
+                    <h4 class="mb-4">SITE MAP</h4>
+            <?php
+              wp_nav_menu(
+                array(
+                  'theme_location'  => 'global_nav',
+                  'menu_class'      => 'clearfix',
+                  'menu_id'         => 'footer-gnav-ul',
+                  'container'       => 'div',
+                  'container_id'    => 'footer-gnav-container',
+                  'container_class' => 'gnav-container'
+                )
+              );?>
+          </div>
+          <?php } ?>
 
-            <div id="footer-cont-sns" class="gr4">
-              <h4>ソーシャルメディア</h4>
-              <?php footer_social_buttons();?>
+                  <!-- <div id="footer-cont-sns">
+                    <h4>ソーシャルメディア</h4>
+                    <?php footer_social_buttons();?>
+                  </div> -->
+                </div>
+              </div>
+              <div class="gr6">
+                <div class="row">
+              <?php
+               $facebook_page_url = get_option('facebook_page_url');
+               if(isset($facebook_page_url) && $facebook_page_url !== ''){
+              ?>
+              <div id="footer-facebook" class="gr12 text-right">
+                  <div class="fb-page" data-href="<?php echo $facebook_page_url;?>" data-width="500" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="<?php echo $facebook_page_url;?>"><a href="<?php echo $facebook_page_url;?>"><?php echo get_option('site_name');?></a></blockquote></div></div>
+              </div>
+              <?php } ?>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="gr6">
-          <div class="row">
-        <?php
-         $facebook_page_url = get_option('facebook_page_url');
-         if(isset($facebook_page_url) && $facebook_page_url !== ''){
-        ?>
-        <div id="footer-facebook" class="gr12 text-right">
-            <div class="fb-page" data-href="<?php echo $facebook_page_url;?>" data-width="500" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="<?php echo $facebook_page_url;?>"><a href="<?php echo $facebook_page_url;?>"><?php echo get_option('site_name');?></a></blockquote></div></div>
-        </div>
-        <?php } ?>
-          </div>
-        </div>
       </div>
-
 
 
     </div><!-- /wrap -->

@@ -1,0 +1,13 @@
+body {
+  &.color02 {
+    & .breadcrumb {
+      &-area {
+      border-bottom: none;
+      }
+    }
+  }
+
+  & .breadcrumb {
+    background-color: initial;
+  }
+}

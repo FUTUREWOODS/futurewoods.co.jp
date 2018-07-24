@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --watch"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

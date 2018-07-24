@@ -10,8 +10,7 @@ wp_head();
 ?>
 
 <?php echo get_option('analytics_tracking_code');?>
-<link rel="stylesheet" href="http://localhost:8081/wp-content/themes/futurewoods/dist/main.css">
-<script src="http://localhost:8081/wp-content/themes/futurewoods/dist/main.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous"> 
 </head>
 
@@ -142,17 +141,6 @@ wp_head();
     
     </div>
   </nav>
-
-
-<?php if( !(is_home() || is_front_page() || is_singular('lp') ) ){ ?>
-  
-  <div class="breadcrumb-area">
-    <div class="wrap">
-      <?php bzb_breadcrumb(); ?>
-    </div>
-  </div>
-    
-<?php } ?>
 
 
 

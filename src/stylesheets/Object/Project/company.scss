@@ -1,0 +1,15 @@
+body {
+  &.color02 {
+    & .cat-content{
+    }
+
+    & article {
+      & .post {
+      }
+
+      &.page {
+        border: initial;
+      }
+    }
+  }
+}

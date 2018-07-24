@@ -1,0 +1,241 @@
+/*
+ Theme Name:   futurewooods
+ Theme URI:    http://xeory.jp/extension
+ Description:  futurewooods.co.jp corporate site(XeoryExtension Child Theme)
+ Author:       FUTUREWOODS
+ Author URI:   https://futurewooods.co.jp
+ Template:     xeory_extension
+ Version:      0.0.1
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  xeory_etension-child
+ GitHub Theme URI: futurewoods/site.git
+*/
+body.color02 #header {
+  background: #fff; }
+
+body.color02 #gnav {
+  background: #fff; }
+  body.color02 #gnav ul li:hover a {
+    color: #0069aa;
+    background: #fff;
+    border-bottom: solid 4px #0069aa; }
+  body.color02 #gnav ul li a {
+    background: #fff;
+    color: #000;
+    padding: 30px 20px;
+    box-sizing: border-box; }
+    body.color02 #gnav ul li a:hover {
+      background: #fff;
+      color: #0069aa;
+      border-bottom: solid 4px #0069aa; }
+  body.color02 #gnav ul li .sub-menu {
+    border: none; }
+    body.color02 #gnav ul li .sub-menu li:last-child {
+      border-bottom: none; }
+    body.color02 #gnav ul li .sub-menu li a {
+      background: #fff;
+      color: #0069aa;
+      padding: 10px 15px;
+      border-bottom: none; }
+      body.color02 #gnav ul li .sub-menu li a:hover {
+        background: #0069aa;
+        color: #fff; }
+
+.l-headerImage img {
+  width: 260px; }
+
+@media screen and (max-width: 1200px) {
+  #header-nav-btn a {
+    background: #fff; }
+  #header-nav-btn i {
+    color: #0069aa; }
+  #gnav-sp #header-cont-content li a:hover {
+    opacity: 0.5; }
+  #gnav-sp #header-cont-content li a:before {
+    font-family: initial;
+    content: initial;
+    position: initial;
+    left: initial;
+    top: initial; }
+  #gnav-sp {
+    background: #000;
+    background: rgba(0, 0, 0, 0.8); } }
+
+@media screen and (max-width: 767px) {
+  #header #logo {
+    float: left; }
+  .post-content h2 {
+    margin: 80px 0 32px -30px;
+    padding: 16px 16px 16px 20px; }
+  #gnav-sp {
+    background: #000;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center; }
+  #header-nav-btn {
+    display: block;
+    width: auto;
+    margin: 0 5px;
+    line-height: 92px;
+    float: right; }
+    #header-nav-btn a {
+      display: initial;
+      text-align: initial;
+      font-size: initial;
+      padding: initial;
+      line-height: initial;
+      background: initial;
+      width: initial; }
+    #header-nav-btn i {
+      font-size: 32px; }
+  .l-headerImage img {
+    width: 200px; } }
+
+body .l-footerImage img {
+  width: 260px; }
+
+body.home .wrap {
+  width: 1000px; }
+
+body.color02.home.color02 .footer-01 {
+  background-color: #031731; }
+  body.color02.home.color02 .footer-01 .footer-address {
+    text-align: left; }
+
+body.color02.home.color02 .footer-02 {
+  background-color: #031731; }
+
+body.color02.home.color02 #footer {
+  border-top: initial; }
+  body.color02.home.color02 #footer-brand-area {
+    border-bottom: initial; }
+  body.color02.home.color02 #footer-content-area h4 {
+    font-size: 20px;
+    font-weight: bold; }
+  body.color02.home.color02 #footer .btn:hover a {
+    color: #031731; }
+
+body.color02 .breadcrumb-area {
+  border-bottom: none; }
+
+body .breadcrumb {
+  background-color: initial; }
+
+body.color02 {
+  color: #222; }
+  body.color02 a {
+    color: inherit; }
+  body.color02 #main_visual {
+    background-size: cover; }
+    body.color02 #main_visual h2 {
+      font-size: 36px; }
+
+body.home.color02 .front-loop {
+  border-top: none;
+  border-bottom: none; }
+  body.home.color02 .front-loop-cont {
+    padding: 0px; }
+  body.home.color02 .front-loop-serviceBg {
+    background-color: #0069aa; }
+    body.home.color02 .front-loop-serviceBg h2 {
+      color: #fff; }
+  body.home.color02 .front-loop h2 {
+    border-bottom: none;
+    font-weight: bold; }
+  body.home.color02 .front-loop .popular_post_box {
+    width: initial;
+    margin: initial;
+    float: initial;
+    display: initial; }
+    body.home.color02 .front-loop .popular_post_box .p_category {
+      padding: 5px 8px;
+      background-color: #0069aa; }
+      body.home.color02 .front-loop .popular_post_box .p_category a {
+        text-decoration: none; }
+    body.home.color02 .front-loop .popular_post_box h3 {
+      font-size: 20px;
+      font-weight: bold; }
+
+.p-news {
+  text-align: left; }
+  .p-news__wrap {
+    text-align: center; }
+  .p-news__items {
+    border-top: 1px solid #ccd5df;
+    padding-top: 20px; }
+    .p-news__items a:hover {
+      text-decoration: initial; }
+  .p-news__date {
+    color: #adadad;
+    font-size: 12px;
+    font-weight: bold; }
+
+.p-comcept__text {
+  margin: auto;
+  width: 684px;
+  text-align: justify; }
+
+.p-service {
+  color: #fff; }
+  .p-service__wrap {
+    text-align: center; }
+  .p-service__lead {
+    margin: auto;
+    width: 684px;
+    text-align: center; }
+  .p-service__title {
+    font-size: 20px;
+    font-weight: bold; }
+  .p-service__items {
+    margin-top: 20px; }
+  .p-service__text {
+    font-size: 14px;
+    text-align: justify;
+    padding: 0 30px; }
+
+.row {
+  display: flex; }
+
+@media screen and (max-width: 767px) {
+  body.color02 #main_visual {
+    background-size: cover; }
+    body.color02 #main_visual h2 {
+      font-size: 20px;
+      line-height: 36px; }
+  .p-comcept__text {
+    margin: auto;
+    width: auto;
+    padding: 20px 0;
+    text-align: justify; }
+  .p-service__lead {
+    margin: auto;
+    width: auto;
+    text-align: center;
+    color: #fff; } }
+
+body.color02 article.page {
+  border: initial; }
+
+.btn {
+  border: 1px solid #fff;
+  padding: 10px 60px;
+  font-size: 14px;
+  border-radius: 0px;
+  color: #fff; }
+  .btn:hover {
+    background-color: #fff; }
+    .btn:hover a {
+      color: #0069aa;
+      text-decoration: none; }
+  .btn--action {
+    background-color: #fff;
+    border-color: #0069aa;
+    color: #0069aa; }
+    .btn--action a {
+      color: #0069aa; }
+    .btn--action:hover {
+      background-color: #0069aa;
+      color: #fff; }
+      .btn--action:hover a {
+        color: #fff;
+        text-decoration: none; }
