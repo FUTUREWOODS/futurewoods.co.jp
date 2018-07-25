@@ -9,10 +9,10 @@ $( function() {
   const wsize = $(window).width();
   if (wsize >= 767) {
     const hsize = $(window).height();
-    $('#main_visual').css({'background-image':`url(${eyecatch})`, 'height': `${hsize - 92 }px`, 'background-size': 'cover'});
+    $('#main_visual').css({'height': `${hsize - 92 }px`});
     main_text(370);
   } else {
-    $('#main_visual').css({'background-image':`url(${eyecatch})`, 'height': '300px', 'background-size': 'cover'});
+    $('#main_visual').css({'height': '300px'});
     main_text(130);
   }
 })

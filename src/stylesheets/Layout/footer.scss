@@ -56,3 +56,7 @@ body {
     }
   }
 }
+
+#footer-content-area #footer-cont-about li:before, #footer-content-area #footer-cont-content li:before {
+  content: initial;
+}

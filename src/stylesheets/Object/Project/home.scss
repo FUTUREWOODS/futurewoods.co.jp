@@ -88,10 +88,18 @@ body {
   }
 }
 
-.p-comcept__text {
+.p-comcept {
+  &__image {
+    width: auto;
+    height: 15px;
+    background: url('../images/titleUl.png') no-repeat; 
+  }
+
+  &__text {
   margin: auto;
   width: 684px;
   text-align: justify;
+  }
 }
 
 .p-service {

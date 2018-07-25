@@ -16,7 +16,8 @@
         <div class="p-comcept">
           <div class="p-comcept__heading">
             <h2>CONCEPT</h2>
-            <img src="./src/images/titleUl.png" alt="">
+            <div class="p-comcept__image"></div>
+            <!-- <img src="/wp-content/themes/futurewoods.co.jp/dist/titleUl.png" alt=""> -->
           </div>
           <div class="wrap">
             <div class="p-comcept__text">
@@ -31,7 +32,7 @@
       <div id="recent_post_content" class="front-loop front-loop-serviceBg">
         <div class="p-comcept__heading">
           <h2>SERVICE</h2>
-          <img src="./src/images/titleUl.png" alt="">
+          <div class="p-comcept__heading"></div>
         </div>
         <div class="wrap">
           <div class="front-loop-cont pb-5">

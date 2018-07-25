@@ -1,47 +1,56 @@
-body.color02 {
-  & #header {
-  background: #fff;
+body {
+  &.home.color02 {
+    & #main_visual {
+      background-image: url('../images/eyecatch.jpg');
+      background-size: cover;
+    }
   }
+  &.color02 {
 
-  & #gnav {
-  background:#fff;
+    & #header {
+    background: #fff;
+    }
 
-    & ul li {
-      &:hover a {
-        color: #0069aa;
-        background: #fff;
-        border-bottom: solid 4px #0069aa;
-      }
+    & #gnav {
+    background:#fff;
 
-      & a {
-      background:#fff;
-      color: #000;
-      padding: 30px 20px;
-      box-sizing: border-box;
-
-        &:hover {
-          background: #fff;
+      & ul li {
+        &:hover a {
           color: #0069aa;
+          background: #fff;
           border-bottom: solid 4px #0069aa;
         }
-      }
-      & .sub-menu {
-        border: none;
 
-        & li {
-          &:last-child {
-            border-bottom:none;
-          }
+        & a {
+        background:#fff;
+        color: #000;
+        padding: 30px 20px;
+        box-sizing: border-box;
 
-          & a {
+          &:hover {
             background: #fff;
             color: #0069aa;
-            padding: 10px 15px;
-            border-bottom: none;
+            border-bottom: solid 4px #0069aa;
+          }
+        }
+        & .sub-menu {
+          border: none;
 
-            &:hover {
-              background: #0069aa;
-              color: #fff;
+          & li {
+            &:last-child {
+              border-bottom:none;
+            }
+
+            & a {
+              background: #fff;
+              color: #0069aa;
+              padding: 10px 15px;
+              border-bottom: none;
+
+              &:hover {
+                background: #0069aa;
+                color: #fff;
+              }
             }
           }
         }
@@ -49,6 +58,7 @@ body.color02 {
     }
   }
 }
+
 
 .l-header {
   &Image {
