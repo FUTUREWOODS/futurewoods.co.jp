@@ -1,4 +1,7 @@
 <?php
+
+require_once('lib/functions/bzb-functions.php');
+
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 

@@ -204,14 +204,14 @@ function bzb_layout_main(){
     if( "right-content" == $post_layout ){
       $main_layout = "col-md-8  col-md-push-4";
     }elseif( "one-column" == $post_layout){
-      $main_layout = "col-md-10 col-md-offset-1";
+      $main_layout = "col-md-12";
     }else{
       $main_layout = "col-md-8";
     }
   }elseif( "right-content" == $post_layout ){
     $main_layout = "col-md-8  col-md-push-4";
   }elseif( "one-column" == $post_layout ){
-    $main_layout = "col-md-10 col-md-offset-1";
+    $main_layout = "col-md-12";
   }else{
     $main_layout = "col-md-8";
   }

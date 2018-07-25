@@ -1,5 +1,16 @@
 import './stylesheets/main.scss';
+import fontawesome from '@fortawesome/fontawesome'
+import solid from '@fortawesome/fontawesome-free-solid'
+import regular from '@fortawesome/fontawesome-free-regular'
+import brands from '@fortawesome/fontawesome-free-brands'
+
+fontawesome.library.add(solid)
+fontawesome.library.add(regular)
+fontawesome.library.add(brands)
+
 import eyecatch from './images/eyecatch.jpg';
+
+fontawesome.library.add(faUser)
 
 function main_text(height) {
   $('.main-catchcopy').css('padding-top', `${height}px`);
