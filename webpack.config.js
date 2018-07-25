@@ -49,7 +49,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('style.css'),
+    new ExtractTextPlugin('main.css'),
     new webpack.ProvidePlugin({
       jQuery: "jquery",
       $: "jquery",
