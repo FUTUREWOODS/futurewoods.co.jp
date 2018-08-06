@@ -1,0 +1,187 @@
+
+
+body {
+  &.color02 {
+    & a {
+      color: inherit;
+    }
+  }
+
+  &.home {
+    & #content {
+      padding: initial;
+    }
+
+    & .front-loop {
+      margin-bottom: 60px;
+    }
+
+    &.color02 {
+      & #main_visual {
+        background-image: url('../images/eyecatch.jpg');
+        background-size: cover;
+
+        & h2 {
+          font-size: 36px;
+        }
+      }
+
+      & .front-loop {
+        border-top: none;
+        border-bottom: none;
+
+        & h2 {
+          padding: 0;
+          margin-bottom: 10px;
+        }
+
+        &-cont {
+          padding: 0px;
+        }
+
+        &-serviceBg {
+          background-color: $main-color;
+
+          & h2 {
+            color: #fff;
+          }
+        }
+
+        & h2 {
+          border-bottom: none;
+          font-weight: bold;
+        }
+
+        & .popular_post_box {
+          & h3 {
+            font-size: 20px;
+            font-weight: bold; 
+          }
+        }
+      }
+    }
+  }
+}
+
+.p- {
+  &news {
+    text-align: left;
+
+    &__wrap {
+      text-align: center;
+    }
+
+    &__items {
+      border-top: 1px solid #ccd5df;
+      padding-top: 20px;
+
+      & a {
+        &:hover {
+          text-decoration: initial;
+        }
+      }
+    }
+
+    &__date {
+      color: #adadad;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+
+  &concept {
+    padding-top: 80px;
+
+    &__text {
+    margin: auto;
+    width: 700px;
+    line-height: 2;
+    text-align: justify;
+    }
+  }
+
+
+  &feature {
+    padding: 80px 0;
+    color: #fff;
+    background-color: $main-color;
+
+    &__image {
+      &--fs {
+        width: 150px;
+        height: 150px;
+        background: url('../images/service_fs.png') no-repeat; 
+        background-size: cover;
+        margin: auto;
+      }
+    }
+
+    &__wrap {
+      text-align: center;
+    }
+
+    &__lead {
+      margin: auto;
+      width: 684px;
+      text-align: center;
+      
+    }
+
+    &__title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    &__items {
+      margin-top: 20px;
+    }
+
+    &__text {
+      font-size: 14px;
+      text-align: justify;
+      padding: 0 30px;
+    }
+  }
+
+  &heroUnit {
+    &__title {
+      font-size: 30px;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+}
+
+
+.row {
+  display: flex;
+}
+
+@media screen and ( max-width: 767px ){
+  body.color02 {
+    #main_visual {
+      background-size: cover;
+
+      & h2 {
+        font-size: 20px;
+        line-height: 36px;
+      }
+    }
+  }
+
+  .p- {
+    &comcept__text {
+      margin: auto;
+      width: auto;
+      padding: 20px 0;
+      text-align: justify;
+    }
+
+    &service__lead {
+      margin: auto;
+      width: auto;
+      text-align: center;
+      color: #fff;
+    }
+  }
+}

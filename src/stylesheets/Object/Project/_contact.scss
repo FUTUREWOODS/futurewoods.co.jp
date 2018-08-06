@@ -1,0 +1,112 @@
+body {
+  &.color02 {
+    & form {
+      & input[type="submit"], body.color02 form button {
+        background: initial;
+        color: $main-color;
+      }
+    }
+  }
+}
+
+
+.p- {
+  &contact {
+    &__content {
+      text-align: center;
+      width: 800px;
+      margin: auto;
+    }
+
+    &__label {
+      text-align: left;
+    }
+
+    &__text {
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+}
+
+.wpcf7 {
+  &c-conf {
+    & input[type="text"],input[type="textarea"],input[type="email"],textarea {
+      border: initial;
+    }
+  }
+
+  & input[type="text"],input[type="textarea"],input[type="email"],textarea {
+    background-color: #fff;
+    color: #333;
+    display: block;
+  }
+
+  & input[type="submit"] {
+
+    @include baseBtn; 
+    
+    &:hover {
+      background-color: #fff;
+
+      & a {
+        color: $main-color;
+        text-decoration: none;
+      }
+    }
+    
+
+    @include activeBtn;
+      & a {
+        color: $main-color;
+      }
+
+      &:hover {
+        background-color: $main-color;
+        color: #fff;
+
+        & a {
+          color: #fff;
+          text-decoration: none;
+        }
+      } 
+  
+    & input[type="button"] {
+      @include baseBtn; 
+      
+      &:hover {
+        background-color: #fff;
+
+        & a {
+          color: $main-color;
+          text-decoration: none;
+        }
+      }
+
+      @include disabledBtn;
+
+      & a {
+        color: #dadada;
+      }
+
+      &:hover {
+        background-color: #dadada;
+        color: #fff;
+
+        & a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+span.wpcf7-list-item.first {
+  margin:initial;
+}
+
+
+
+
+

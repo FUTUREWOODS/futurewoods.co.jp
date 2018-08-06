@@ -1,0 +1,36 @@
+body {
+  .l- {
+    &title {
+      &__heading {
+        text-align: center;
+        padding-bottom: 30px;
+
+        & h2 {
+          padding: 0;
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+      }
+
+      &__image {
+      width: 100px;
+      height: 12px;
+      background: url('../images/titleUl.png') no-repeat; 
+      background-size: cover;
+      margin: auto;
+
+        &--mirror {
+          width: 100px;
+          height: 12px;
+          background: url('../images/titleUl_white.png') no-repeat; 
+          background-size: cover;
+          margin: auto;
+        }
+      }
+    }
+
+    &astarisk {
+      color: #e65f5f;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+body {
+  & .l-footer {
+    &Image {
+      & img {
+        width: 260px;
+      }
+    }
+  }
+
+  &.color02 { 
+    & .footer {
+      &-01 {
+        background-color: #031731;
+
+        & .footer-address {
+          text-align: left;  
+        }
+      }
+
+      &-02 {
+      background-color: #031731;
+      }
+    }
+
+    & #footer {
+      border-top: initial;
+
+      & .wrap {
+        width: 1000px;
+      }
+
+      &-brand-area {
+        border-bottom: initial;
+      }
+
+      &-content-area {
+        & h4 {
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+
+      & .btn {
+        &:hover {
+          & a {
+            color: #031731;
+          }
+        }
+      }
+    }
+  }
+}
+
+#footer-content-area #footer-cont-about li:before, #footer-content-area #footer-cont-content li:before {
+  content: initial;
+}

@@ -1,0 +1,25 @@
+.nav-tabs {
+  font-size: 14px;
+
+  & .nav-item {
+    margin: 0 10px;
+  }
+
+  & .c-tab {
+    &__currentMenu {
+      border-bottom: solid 3px $main-color;
+
+      &:hover {
+        border: solid 1px #fff;
+        border-bottom: solid 3px $main-color;
+      }
+    }
+
+    &--active {
+      &:hover {
+      border: solid 1px #fff;
+      color: $main-color;
+      }
+    }
+  }
+}

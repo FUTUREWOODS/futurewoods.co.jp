@@ -1,13 +1,16 @@
 body {
   &.color02 {
     & .breadcrumb {
+      background-color: initial;
+      font-size: 12px;
+
       &-area {
       border-bottom: none;
       }
     }
   }
 
-  & .breadcrumb {
-    background-color: initial;
+  & .l-breadcrumb {
+    
   }
 }

@@ -1,14 +1,12 @@
 body {
-  &.home.color02 {
+  &.color02 {
     & #main_visual {
       background-image: url('../images/eyecatch.jpg');
       background-size: cover;
     }
-  }
-  &.color02 {
 
     & #header {
-    background: #fff;
+    background: none;
     }
 
     & #gnav {
@@ -16,9 +14,15 @@ body {
 
       & ul li {
         &:hover a {
-          color: #0069aa;
+          color: $main-color;
           background: #fff;
-          border-bottom: solid 4px #0069aa;
+          border-bottom: solid 4px $main-color;
+        }
+
+        &.current-menu-item {
+          & a {
+            background: #fff;
+          }
         }
 
         & a {
@@ -29,8 +33,8 @@ body {
 
           &:hover {
             background: #fff;
-            color: #0069aa;
-            border-bottom: solid 4px #0069aa;
+            color: $main-color;
+            border-bottom: solid 4px $main-color;
           }
         }
         & .sub-menu {
@@ -43,12 +47,12 @@ body {
 
             & a {
               background: #fff;
-              color: #0069aa;
+              color: $main-color;
               padding: 10px 15px;
               border-bottom: none;
 
               &:hover {
-                background: #0069aa;
+                background: $main-color;
                 color: #fff;
               }
             }
@@ -75,7 +79,7 @@ body {
     }
 
     & i {
-      color: #0069aa;
+      color: $main-color;
     } 
   }
 

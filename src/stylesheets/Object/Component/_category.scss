@@ -1,0 +1,24 @@
+body {
+  &.home {
+    &.color02 {
+      & .front-loop {
+        & .popular_post_box {
+          width: initial;
+          margin: initial;
+          float: initial;
+          display: initial;
+
+          & .p_category {
+            padding: 5px 8px;
+            background: $main-color;
+
+            & a {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

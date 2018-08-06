@@ -1,0 +1,68 @@
+@mixin baseBtn {
+  border: 1px solid #fff;
+  padding: 10px 60px;
+  font-size: 14px;
+  border-radius: 0px;
+  color: #fff;  
+}
+
+@mixin activeBtn {
+  background-color: #fff;
+  border-color: $main-color;
+  color: $main-color;
+}
+
+@mixin disabledBtn {
+  background-color: #fff;
+  border-color: #dadada;
+  color: #dadada; 
+}
+
+.btn {
+  @include baseBtn;
+
+  &:hover {
+      background-color: #fff;
+
+      & a {
+        color: $main-color;
+        text-decoration: none;
+      }
+    }
+  
+  &--active {
+    @include activeBtn; 
+
+    & a {
+      color: $main-color;
+    }
+
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+
+      & a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &--disabled {
+    @include disabledBtn;
+
+    & a {
+      color: #dadada;
+    }
+
+    &:hover {
+      background-color: #dadada;
+      color: #fff;
+
+      & a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}

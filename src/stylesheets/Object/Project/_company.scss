@@ -1,0 +1,59 @@
+body {
+  &.color02 {
+    & .post-header {
+      border-bottom: initial;
+      padding: initial;
+    }
+
+    & article {
+      & .post {
+      }
+
+      &.page {
+        border: initial;
+      }
+    }
+  }
+  &.page {
+    & .post-title {
+        margin-bottom: 10px;
+        line-height: 1.2;
+      }
+    }
+}
+
+.p-company {
+  &__text {
+    font-size: 14px;
+    line-height: 2;
+    text-align: justify;
+    padding: 30px 0;
+  }
+
+  &__image {
+    &--01 {
+      width: 332px;
+      height: 332px;
+      background: url('../images/officer_01.jpg') no-repeat; 
+      background-size: cover;
+      margin: auto;
+    }
+
+    &--02 {
+      width: 332px;
+      height: 332px;
+      background: url('../images/officer_02.jpg') no-repeat; 
+      background-size: cover;
+      margin: auto;
+    }
+
+    &--03 {
+      width: 332px;
+      height: 332px;
+      background: url('../images/officer_03.png') no-repeat; 
+      background-size: cover;
+      margin: auto;
+    }
+  }
+}
+

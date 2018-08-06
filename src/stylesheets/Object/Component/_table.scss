@@ -1,0 +1,41 @@
+body {
+  &.color02 {
+    & .post-content {
+      & table {
+        border: initial;
+      }
+    }
+  }
+}
+
+
+.c- {
+  &table {
+    border: initial;
+  }
+}
+
+body {
+  &.color02 {
+    & .post-content {
+      & ul,ol {
+      margin-left: initial;
+      }
+
+      & table {
+        & td {
+          padding: 30px; 
+          border: initial;
+        }
+      }
+    }
+  }
+}
+
+tr {
+  border-top: 1px solid #ddd;
+
+  &:last-child {
+    border-bottom: 1px solid #ddd;    
+  }
+}

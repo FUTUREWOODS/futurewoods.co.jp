@@ -16,3 +16,6 @@ function theme_enqueue_styles() {
 function theme_scripts() {
   wp_enqueue_script( 'functions-child', get_stylesheet_directory_uri() . '/dist/main.js', array() );
 }
+
+remove_filter('the_content', 'wpautop');
+remove_filter('the_excerpt', 'wpautop');

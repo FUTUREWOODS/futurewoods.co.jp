@@ -8,65 +8,67 @@
   }
 ?>
 
-<div id="content">
-  <div class="jumbotron jumbotron-fluid" <?php echo $title_bg; ?>>
+<div class="jumbotron jumbotron-fluid" <?php echo $title_bg; ?>>
       <div class="container">
-          <h1 class="display-4"><?php the_title(); ?></h1>
+          <h1 class="p-heroUnit__title"><?php the_title(); ?></h1>
       </div>
+</div>
+<?php if( !(is_home() || is_front_page() || is_singular('lp') ) ){ ?><!-- パンくずリストここから -->
+  
+  <div class="breadcrumb-area">
+    <div class="l-breadcrumb">
+      <?php bzb_breadcrumb(); ?>
+    </div>
   </div>
-<div class="wrap clearfix">
-
-  <div id="main" <?php bzb_layout_main(); ?> role="main" itemprop="mainContentOfPage">
-
-    <div class="main-inner">
-
-    <?php
-			if ( have_posts() ) :
-
-				while ( have_posts() ) : the_post();
-
-        ?>
+    
+<?php } ?><!-- パンくずリストここまで -->
 
 
-    <?php $cf = get_post_meta($post->ID); ?>
-    <article id="post-<?php echo the_ID(); ?>" <?php post_class(); ?> itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
+<div id="content">
+  <div class="wrap clearfix">
 
-      <header class="post-header">
-        <h2 class="post-title" itemprop="headline"><?php the_title(); ?></h2>
-      </header>
+    <div id="main" <?php bzb_layout_main(); ?> role="main" itemprop="mainContentOfPage">
+
+      <div class="main-inner">
+
+      <?php
+  			if ( have_posts() ) :
+
+  				while ( have_posts() ) : the_post();
+
+          ?>
 
 
-      <section class="post-content" itemprop="text">
-        <?php the_content(); ?>
-      </section>
+      <?php $cf = get_post_meta($post->ID); ?>
+      <article id="post-<?php echo the_ID(); ?>" <?php post_class(); ?> itemscope="itemscope" itemtype="http://schema.org/CreativeWork">
 
-      <?php bzb_get_cta($post->ID); ?>
+        <section class="post-content" itemprop="text">
+          <?php the_content(); ?>
+        </section>
 
-      <div class="post-share">
-        <?php dynamic_sidebar('freearea2');?>
-      </div>
+        <?php bzb_get_cta($post->ID); ?>
 
-    </article>
+      </article>
 
-        <?php
+          <?php
 
-				endwhile;
+  				endwhile;
 
-			else :
-		?>
+  			else :
+  		?>
 
-    <p>投稿が見つかりません。</p>
+      <p>投稿が見つかりません。</p>
 
-    <?php
-			endif;
-		?>
+      <?php
+  			endif;
+  		?>
 
-    </div><!-- /main-inner -->
-  </div><!-- /main -->
+      </div><!-- /main-inner -->
+    </div><!-- /main -->
 
-<?php get_sidebar(); ?>
+  <?php get_sidebar(); ?>
 
-</div><!-- /wrap -->
+  </div><!-- /wrap -->
 
 </div><!-- /content -->
 
