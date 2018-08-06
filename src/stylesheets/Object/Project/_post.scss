@@ -1,0 +1,32 @@
+body.color02 {
+    & article, span, div, h3 {
+        &.p-post {
+            border: none;
+            border-bottom: 1px solid #e5e5e5 ;
+            padding: 20px 0;
+            margin-bottom: 40px;
+    
+            &Header {
+                &__label {
+                    color: #fff;
+                    padding: 5px 10px;
+                    background-color: $main-color;
+                }
+            }
+    
+            &Content {
+                & a {
+                    display: block;
+
+                    &:hover {
+                        text-decoration: none;
+                        color: $main-color;
+                    }
+                }
+                &__head {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
