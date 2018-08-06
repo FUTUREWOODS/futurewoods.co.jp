@@ -1,5 +1,5 @@
 body.color02 {
-    & article, span, div, h3 {
+    & article, span, div, h3, header {
         &.p-post {
             border: none;
             border-bottom: 1px solid #e5e5e5 ;
@@ -7,6 +7,7 @@ body.color02 {
             margin-bottom: 40px;
     
             &Header {
+                border-bottom: 1px solid #e5e5e5 ;
                 &__label {
                     color: #fff;
                     padding: 5px 10px;
