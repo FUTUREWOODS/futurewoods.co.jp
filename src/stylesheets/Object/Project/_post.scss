@@ -16,6 +16,14 @@ body.color02 {
             }
     
             &Content {
+                &__link {
+                    &:hover {
+                        color: $main-color;
+                    }
+                    & a:hover {
+                        text-decoration: none;
+                    }
+                }
                 & a {
                     display: block;
 

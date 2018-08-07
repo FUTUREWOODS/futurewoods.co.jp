@@ -61,11 +61,11 @@
       </section>
     </article>
     <div class="row">
-      <div class="col-6 p-postContent">
-        <?php previous_post_link('%link', '%title'); ?>
+      <div class="col-6 p-postContent__link">
+        <?php previous_post_link('< %link', '%title'); ?>
       </div>
-      <div class="col-6 text-right p-postContent">
-        <?php next_post_link('%link', '%title'); ?>
+      <div class="col-6 text-right p-postContent__link">
+        <?php next_post_link('%link >', '%title'); ?>
       </div>
     </div>
 
