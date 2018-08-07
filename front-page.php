@@ -41,7 +41,7 @@
                   <br>私たちは2つの事業を展開し、サービスの開発に取り組んでいます。</p>  
               </div><!-- /text -->
               <div class="row pt-4">
-                <div class="col-6 border-right border-white">
+                <div class="col-md-6 col-sm-12 border-right border-white">
                   <div class="p-feature__wrap">
                     <div class="p-feature__items">
                       <div class="p-feature__image--fs mb-4"></div>
@@ -55,7 +55,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6 col-sm-12">
                   <div class="p-feature__wrap">
                     <div class="p-feature__items">
                       <div class="p-feature__image--fs mb-4"></div>
@@ -117,7 +117,7 @@
                         $recent_class = 'popular_post_box recent-'.$i;
                 ?>
 
-                    <div class="p-news col-4 px-4 mb-5">
+                    <div class="p-news col-md-4 col-sm-12 px-4 mb-5">
                       <div class="p-news__items">
                         <article id="post-<?php echo the_ID(); ?>" <?php post_class($recent_class); ?>>
                             <a href="<?php the_permalink(); ?>" class="wrap-a">
