@@ -29,7 +29,7 @@
     <div class="main-inner">
     
     <div class="l-title__heading">
-      <h2 class="h2"><?php bzb_title(); ?>一覧</h2>
+      <h2 class="h2">お知らせ一覧</h2>
       <div class="l-title__image"></div>
     </div>
     <div class="p-postForm nav justify-content-end">
@@ -39,25 +39,11 @@
             <?
             $args = array(
               'show_option_all' => 'すべて',
-              'option_none_value' => '',
               'orderby' => 'id',
-              'class' => 'form-control form-control-sm ml-2',
-              'taxonomy' => 'news',
-              'name' => 'news',
-              'value_field' => 'slug',
-            );
-            wp_dropdown_categories($args);
-          ?>
-        </div>
-        <div class="form-group mx-sm-3 mb-2">
-          年度:
-          <?
-            $args = array(
-              'show_option_all' => 'すべて',
-              'option_none_value' => '',
-              'orderby' => 'id',
-              'class' => 'form-control form-control-sm ml-2',
-              'taxonomy' => 'news',
+              'child_of' => 0,
+              'depth' => 2,
+              'class' => 'form-control form-control-sm ml-2 js-category',
+              'taxonomy' => 'category',
               'name' => 'news',
               'value_field' => 'slug',
             );

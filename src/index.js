@@ -25,3 +25,8 @@ $( function() {
     main_text(130);
   }
 })
+
+$(document).on('change', '.js-category', () => {
+  const $category = $('.js-category')
+  location.href = "/news/category/news/" + $category.val();
+})
