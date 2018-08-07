@@ -26,6 +26,14 @@ body {
           background-size: cover;
           margin: auto;
         }
+
+        &--sub {
+          width: 20px;
+          height: 17px;
+          background: url('../images/titleSub.png') no-repeat; 
+          background-size: cover;
+          margin: 0 5px 0 15px;
+        }
       }
     }
 

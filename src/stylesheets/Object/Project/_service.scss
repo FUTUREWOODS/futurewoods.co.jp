@@ -15,4 +15,47 @@
   &__link {
     color: $main-color;
   }
+
+  &__image {
+    &--cloudOne {
+      width: 158px;
+      height: 20px;
+      background: url('../images/cloudOne.png') no-repeat; 
+      background-size: cover;
+    }
+
+    &--dataX {
+      width: 94px;
+      height: 20px;
+      background: url('../images/dataX.png') no-repeat; 
+      background-size: cover;
+    }
+
+    &--fdp {
+      width: 51px;
+      height: 20px;
+      background: url('../images/fdp.png') no-repeat; 
+      background-size: cover;
+    }
+
+    &--dataDrive {
+      width: 110px;
+      height: 20px;
+      background: url('../images/dataDrive.png') no-repeat; 
+      background-size: cover;
+    }
+  }
+
+  &__figure {
+    border: 1px solid #dadada;
+    padding: 15px;
+    text-align: center;
+    height: 260px;
+  }
+
+  &__mediaBox {
+    height: 80px;
+    padding: 10px 0;
+    margin: auto;
+  }
 }
