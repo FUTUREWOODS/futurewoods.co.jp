@@ -23,9 +23,8 @@
 </header>
 
 <?php }else{ ?>
-<header id="header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-  <div class="wrap clearfix">
-    <?php
+<header id="header" class="l-rootHeader js-rootHeader" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+  <?php
       $logo_image = get_option('logo_image');
       $logo_text = get_option('logo_text');
       if( !empty($logo_image) && get_option('toppage_logo_type') == 'logo_image') :
@@ -44,7 +43,7 @@
       <a href="<?php echo home_url(); ?>" class="l-headerImage"><?php echo $logo_inner; ?></a><br />
     </<?php echo $logo_wrap; ?>>    <!-- start global nav  -->
     
-    <div id="header-right" class="clearfix">
+    <div id="" class="clearfix">
       
     <?php if( has_nav_menu( 'footer_nav' ) ){ ?>
     
@@ -95,7 +94,6 @@
       </div>
       
     <?php } ?>
-  </div>
 </header>
 <?php } // if is_singular('lp') ?>
 
