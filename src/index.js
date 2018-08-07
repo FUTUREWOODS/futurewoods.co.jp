@@ -25,3 +25,25 @@ $( function() {
     main_text(130);
   }
 })
+
+
+// news 並び替え
+$(document).on('change', '.js-category', () => {
+  const $category = $('.js-category')
+  location.href = "/news/category/news/" + $category.val();
+})
+
+
+// header 追尾
+$(document).on('scroll', window, () => {
+  const $header = $('.js-rootHeader')
+  const heroBottom = 100
+
+  if($(window).scrollTop() > heroBottom){
+      $header.addClass('l-rootHeader--active');   
+  }
+  else{
+      $header.removeClass('l-rootHeader--active');   
+  }
+})
+
