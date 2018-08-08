@@ -24,7 +24,7 @@
 
 <?php }else{ ?>
 <header id="header" class="l-rootHeader js-rootHeader" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-   <h1 class="py-3 px-2">
+   <h1 id="logo">
      <a href="/" class="l-headerImage js-headerImage">
      <img src="
      <?php 
