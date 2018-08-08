@@ -3,6 +3,8 @@ import fontawesome from '@fortawesome/fontawesome'
 import solid from '@fortawesome/fontawesome-free-solid'
 import regular from '@fortawesome/fontawesome-free-regular'
 import brands from '@fortawesome/fontawesome-free-brands'
+import './images/fw_logo_001.png'
+import './images/fw_logo_003.png'
 
 fontawesome.library.add(solid)
 fontawesome.library.add(regular)
