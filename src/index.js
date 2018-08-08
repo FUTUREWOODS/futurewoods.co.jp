@@ -40,11 +40,14 @@ $(document).on('change', '.js-category', () => {
 $(document).on('scroll', window, () => {
   const $header = $('.js-rootHeader')
   const heroBottom = 100
+  const $headerImage = $('.js-headerImage')
 
   if($(window).scrollTop() > heroBottom){
+      $headerImage.html('<img src="dist/fw_logo_003.png" alt="FUTUREWOODS" >')
       $header.addClass('l-rootHeader--active');   
   }
   else{
+      $headerImage.html('<img src="dist/fw_logo_001.png" alt="FUTUREWOODS" >')
       $header.removeClass('l-rootHeader--active');   
   }
 })

@@ -24,9 +24,9 @@
 
 <?php }else{ ?>
 <header id="header" class="l-rootHeader js-rootHeader" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-   <h1>
-     <a href="/" class="l-headerImage">
-        <img src="<?php echo get_theme_file_uri('dist/fw_logo_001.png'); ?>" alt="FUTUREWOODS">
+   <h1 class="py-3">
+     <a href="/" class="l-headerImage js-headerImage">
+        <img src="<?php echo get_theme_file_uri('dist/fw_logo_003.png'); ?>" alt="FUTUREWOODS">
      </a>
    </h1>
     <div id="" class="clearfix">
