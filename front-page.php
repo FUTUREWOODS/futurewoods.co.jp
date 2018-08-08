@@ -40,7 +40,7 @@
                 <p>「実際の売れる仕組みづくり」で役に立つソリューションを生みだすために、
                   <br>私たちは2つの事業を展開し、サービスの開発に取り組んでいます。</p>  
               </div><!-- /text -->
-              <div class="row pt-4">
+              <div class="row">
                 <div class="col-md-6 col-sm-12 p-feature__line">
                   <div class="p-feature__wrap">
                     <div class="p-feature__items">

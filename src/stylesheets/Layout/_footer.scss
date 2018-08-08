@@ -25,10 +25,6 @@ body {
     & #footer {
       border-top: initial;
 
-      // & .wrap {
-      //   width: 1000px;
-      // }
-
       &-brand-area {
         border-bottom: initial;
       }
@@ -54,3 +50,39 @@ body {
 #footer-content-area #footer-cont-about li:before, #footer-content-area #footer-cont-content li:before {
   content: initial;
 }
+
+@media screen and ( max-width: 767px ){
+  body.home.color02 {
+    & #footer {
+      & .wrap {
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      &-list-area {
+        width: auto;
+        margin: auto;
+      }
+    }
+
+    & .footer-01 {
+      padding: 30px 0;
+      
+      & .footer-address {
+        width: 280px;
+        margin: auto;
+      }
+    }
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
