@@ -9,7 +9,7 @@
 @mixin activeBtn {
   background-color: #fff;
   border-color: $main-color;
-  color: $main-color;
+  color: $main-color !important;
 }
 
 @mixin disabledBtn {
@@ -39,7 +39,7 @@
 
     &:hover {
       background-color: $main-color;
-      color: #fff;
+      color: #fff !important;
 
       & a {
         color: #fff;

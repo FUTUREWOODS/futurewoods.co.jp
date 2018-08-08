@@ -145,9 +145,7 @@
                         endif;
                   ?>
               </div><!-- /front-root-cont -->
-              <p class="btn btn--active">
-                <a href="#">お知らせ一覧 <i class="fas fa-chevron-right"></i></a>
-              </p><!-- /text -->
+              <a class="btn btn--active" href="#">お知らせ一覧 <i class="fas fa-chevron-right"></i></a>
             </div>
 
           </div><!-- /wrap -->

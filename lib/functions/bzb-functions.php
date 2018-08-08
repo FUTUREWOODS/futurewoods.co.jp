@@ -88,20 +88,20 @@ if( !function_exists('bzb_breadcrumb') ){
     $post_type = get_post_type( $post );
 
     $bc  = '<ol class="breadcrumb clearfix">';
-    $bc .= '<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'.home_url().'" itemprop="url"><i class="fa fa-home"></i> <span itemprop="title">ホーム</span></a> / </li>';
+    $bc .= '<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'.home_url().'" itemprop="url"> <span itemprop="title">ホーム</span></a> <i class="fas fa-angle-right"></i> </li>';
 
     if( is_home() ){
       // メインページ
-      $bc .= '<li><i class="fa fa-list-alt"></i> 最新記事一覧</li>';
+      $bc .= '<li> 最新記事一覧</li>';
     }elseif( is_search() ){
       // 検索結果ページ
-      $bc .= '<li><i class="fa fa-search"></i> 「'.get_search_query().'」の検索結果</li>';
+      $bc .= '<li> 「'.get_search_query().'」の検索結果</li>';
     }elseif( is_404() ){
       // 404ページ
-      $bc .= '<li><i class="fa fa-question-circle"></i> ページが見つかりませんでした</li>';
+      $bc .= '<li> ページが見つかりませんでした</li>';
     }elseif( is_date() ){
       // 日付別一覧ページ
-      $bc .= '<li><i class="fa fa-clock-o"></i> ';
+      $bc .= '<li> ';
       if( is_day() ){
         $bc .= get_query_var( 'year' ).'年 ';
         $bc .= get_query_var( 'monthnum' ).'月 ';
@@ -115,27 +115,27 @@ if( !function_exists('bzb_breadcrumb') ){
       $bc .= '</li>';
     }elseif( is_post_type_archive() ){
       // カスタムポストアーカイブ
-      $bc .= '<li><i class="fa fa-folder"></i> '.post_type_archive_title('', false).'</li>';
+      $bc .= '<li> '.post_type_archive_title('', false).'</li>';
     }elseif( is_category() ){
       // カテゴリーページ
       $cat = get_queried_object();
       if( $cat -> parent != 0 ){
         $ancs = array_reverse(get_ancestors( $cat->cat_ID, 'category' ));
         foreach( $ancs as $anc ){
-          $bc .= '<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'.get_category_link($anc).'" itemprop="url"><i class="fa fa-folder"></i> <span itemprop="title">'.get_cat_name($anc).'</span></a> / </li>';
+          $bc .= '<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'.get_category_link($anc).'" itemprop="url"> <span itemprop="title">'.get_cat_name($anc).'</span></a> <i class="fas fa-angle-right"></i> </li>';
         }
       }
-      $bc .= '<li><i class="fa fa-folder"></i> '.$cat->cat_name.'</li>';
+      $bc .= '<li> '.$cat->cat_name.'</li>';
     }elseif( is_tag() ){
       // タグページ
-      $bc .= '<li><i class="fa fa-tag"></i> '.single_tag_title("",false).'</li>';
+      $bc .= '<li> '.single_tag_title("",false).'</li>';
     }elseif( is_author() ){
       // 著者ページ
-      $bc .= '<li><i class="fa fa-user"></i> '.get_the_author_meta('display_name').'</li>';
+      $bc .= '<li> '.get_the_author_meta('display_name').'</li>';
     }elseif( is_attachment() ){
       // 添付ファイルページ
       if( $post->post_parent != 0 ){
-        $bc .= '<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'.get_permalink( $post->post_parent ).'" itemprop="url"><i class="fa fa-file-text"></i> <span itemprop="title">'.get_the_title( $post->post_parent ).'</span></a> / </li>';
+        $bc .= '<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'.get_permalink( $post->post_parent ).'" itemprop="url"> <span itemprop="title">'.get_the_title( $post->post_parent ).'</span></a> <i class="fas fa-angle-right"></i> </li>';
       }
       $bc .= '<li><i class="fa fa-picture-o"></i> '.$post->post_title.'</li>';
     }elseif( is_singular('post') ){
@@ -145,31 +145,31 @@ if( !function_exists('bzb_breadcrumb') ){
       if( $cat->parent != 0 ){
         $ancs = array_reverse(get_ancestors( $cat->cat_ID, 'category' ));
         foreach( $ancs as $anc ){
-          $bc .= '<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'.get_category_link( $anc ).'" itemprop="url"><i class="fa fa-folder"></i> <span itemprop="title">'.get_cat_name($anc).'</span></a> / </li>';
+          $bc .= '<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'.get_category_link( $anc ).'" itemprop="url"> <span itemprop="title">'.get_cat_name($anc).'</span></a> <i class="fas fa-angle-right"></i> </li>';
         }
       }
-      $bc .= '<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'.get_category_link( $cat->cat_ID ).'" itemprop="url"><i class="fa fa-folder"></i> <span itemprop="title">'.$cat->cat_name.'</span></a> / </li>';
+      $bc .= '<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'.get_category_link( $cat->cat_ID ).'" itemprop="url"> <span itemprop="title">'.$cat->cat_name.'</span></a> <i class="fas fa-angle-right"></i> </li>';
       $bc .= '<li><i class="fa fa-file-text"></i> '.$post->post_title.'</li>';
     }elseif( is_singular('page') ){
       // 固定ページ
       if( $post->post_parent != 0 ){
         $ancs = array_reverse( $post->ancestors );
         foreach( $ancs as $anc ){
-          $bc .= '<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'.get_permalink( $anc ).'" itemprop="url"><i class="fa fa-file"></i> <span itemprop="title">'.get_the_title($anc).'</span></a> /';
+          $bc .= '<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'.get_permalink( $anc ).'" itemprop="url"> <span itemprop="title">'.get_the_title($anc).'</span></a> <i class="fas fa-angle-right"></i>';
         }
       }
-      $bc .= '<li><i class="fa fa-file"></i> '.$post->post_title.'</li>';
+      $bc .= '<li> '.$post->post_title.'</li>';
     }elseif( is_singular( $post_type ) ){
       // カスタムポスト記事ページ
       $obj = get_post_type_object($post_type);
 
       if( $obj->has_archive == true ){
-      $bc .= '<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'.get_post_type_archive_link($post_type).'" itemprop="url"><i class="fa fa-pencil-square-o"></i> <span itemprop="title">'.get_post_type_object( $post_type )->label.'</span></a> / </li>';
+      $bc .= '<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="'.get_post_type_archive_link($post_type).'" itemprop="url"> <span itemprop="title">'.get_post_type_object( $post_type )->label.'</span></a> <i class="fas fa-angle-right"></i> </li>';
       }
-      $bc .= '<li><i class="fa fa-file"></i> '.$post->post_title.'</li>';
+      $bc .= '<li> '.$post->post_title.'</li>';
     }else{
       // その他のページ
-      $bc .= '<li><i class="fa fa-file"></i> '.$post->post_title.'</li>';
+      $bc .= '<li> '.$post->post_title.'</li>';
     }
 
     $bc .= '</ol>';
