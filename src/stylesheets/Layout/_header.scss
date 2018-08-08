@@ -15,13 +15,13 @@ body {
       & ul li {
         &:hover a {
           color: $main-color;
-          background: #fff;
+          background: initial;
           border-bottom: solid 4px $main-color;
         }
 
         &.current-menu-item {
           & a {
-            background: #fff;
+            background: initial;
           }
         }
 
@@ -33,19 +33,20 @@ body {
           box-sizing: border-box;
 
           &:hover {
-            background: #fff;
+            background: initial;
             color: $main-color;
             border-bottom: solid 4px $main-color;
           }
         }
         & .sub-menu {
-          border: none;
+          border: 1px solid #e5e5e5;
 
           & li {
+            &:last-child {
+              border-bottom: initial;
+            }
 
             & a {
-              border-left: 1px #e5e5e5 solid;
-              border-right: 1px #e5e5e5 solid;
               background: #fff;
               color: $main-color;
               padding: 10px 15px;
@@ -72,9 +73,11 @@ body {
   width: 100%;
 
   &--active {
-    background: #FFF !important;
+    background: #fff !important;
+    border-bottom: 1px solid #e5e5e5;
+
     & a {
-      color: #000 !important;
+      color: #333 !important;
       &:hover {
         color: $main-color !important;
       }
@@ -128,8 +131,9 @@ body {
 }
 
 @media screen and ( max-width: 767px ){
-  #header #logo {
-    float: left;
+  & #header #logo {
+    width: 200px;
+    margin: 0 15px;
   }
   .post-content h2 {
     margin: 80px 0 32px -30px;
@@ -145,14 +149,14 @@ body {
   #header-nav-btn {
     display: block;
     width: auto;
-    margin: 0 5px;
+    margin: 0 20px;
     line-height: 92px;
     float: right;
 
     & a {
       display: initial;
       text-align: initial;
-      font-size: initial;
+      font-size: 25px;
       padding: initial;
       line-height: initial;
       background: initial;

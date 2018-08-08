@@ -41,7 +41,7 @@
                   <br>私たちは2つの事業を展開し、サービスの開発に取り組んでいます。</p>  
               </div><!-- /text -->
               <div class="row pt-4">
-                <div class="col-md-6 col-sm-12 border-right border-white">
+                <div class="col-md-6 col-sm-12 p-feature__line">
                   <div class="p-feature__wrap">
                     <div class="p-feature__items">
                       <div class="p-feature__image--fs mb-4"></div>

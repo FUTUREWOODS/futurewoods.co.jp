@@ -7,10 +7,18 @@
     $title_bg = "style='background-image:url(".$img_url.");background-size:cover'";
   }
 ?>
-
+<div style="height: 92px;">
+  
+</div>
 <div class="jumbotron jumbotron-fluid" <?php echo $title_bg; ?>>
       <div class="container">
-          <h1 class="p-heroUnit__title"><?php the_title(); ?></h1>
+          <h1 class="p-heroUnit__title">
+            <?php 
+              $parent_id = $post->post_parent; 
+              $parent_title = get_post($parent_id)->post_title;
+              echo $parent_title;
+            ?> 
+          </h1>
       </div>
 </div>
 <?php if( !(is_home() || is_front_page() || is_singular('lp') ) ){ ?><!-- パンくずリストここから -->
