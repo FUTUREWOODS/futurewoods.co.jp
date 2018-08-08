@@ -1,7 +1,13 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin()
+    ]
+  },
   mode: 'development',
   devtool: 'eval-source-map',
   entry: ['./src/index.js'],
@@ -21,7 +27,11 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader',
-
+            options: {
+              presets: [
+                ['env', {'modules': false}]
+              ]
+            }
           }
         ],
         exclude: /node_modules/,
@@ -49,6 +59,7 @@ module.exports = {
     ]
   },
   plugins: [
+    
     new ExtractTextPlugin('main.css'),
     new webpack.ProvidePlugin({
       jQuery: "jquery",

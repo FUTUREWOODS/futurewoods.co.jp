@@ -26,7 +26,15 @@
 <header id="header" class="l-rootHeader js-rootHeader" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
    <h1 id="logo">
      <a href="/" class="l-headerImage js-headerImage">
-        <img src="<?php echo get_theme_file_uri('dist/fw_logo_003.png'); ?>" alt="FUTUREWOODS">
+     <img src="
+     <?php 
+        if ($_SERVER["REQUEST_URI"] == "/") {
+          echo get_theme_file_uri('dist/fw_logo_003.png');
+        } else {
+          echo get_theme_file_uri('dist/fw_logo_001.png');
+        }
+      ?>
+     " alt="FUTUREWOODS">
      </a>
    </h1>
     <div id="" class="clearfix">
@@ -55,17 +63,31 @@
     <?php if( has_nav_menu( 'global_nav' ) ){ ?>
     <div id="header-gnav-area">
       <nav id="gnav" role="navigation" itemscope="itemscope" itemtype="http://scheme.org/SiteNavigationElement">
-      <?php
-        wp_nav_menu(
-          array(
-            'theme_location'  => 'global_nav',
-            'menu_class'      => 'clearfix',
-            'menu_id'         => 'gnav-ul',
-            'container'       => 'div',
-            'container_id'    => 'gnav-container',
-            'container_class' => 'gnav-container'
-          )
-        );?>  
+      <?php 
+        if ($_SERVER["REQUEST_URI"] == "/") {
+          wp_nav_menu(
+            array(
+              'theme_location'  => 'global_nav',
+              'menu_class'      => 'clearfix',
+              'menu_id'         => 'gnav-ul',
+              'container'       => 'div',
+              'container_id'    => 'gnav-container',
+              'container_class' => 'gnav-container'
+            )
+            );
+        } else {
+          wp_nav_menu(
+            array(
+              'theme_location'  => 'global_nav',
+              'menu_class'      => 'clearfix standerd',
+              'menu_id'         => 'gnav-ul',
+              'container'       => 'div',
+              'container_id'    => 'gnav-container',
+              'container_class' => 'gnav-container'
+            )
+          );
+        }
+      ?> 
       </nav>
     </div>
     <?php } ?>

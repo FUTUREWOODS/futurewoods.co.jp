@@ -6,6 +6,8 @@
     $title_bg = "style='background-image:url(".$img_url.");background-size:cover'";
   }
 ?>
+<div class="header-space">
+</div>
 <div class="jumbotron jumbotron-fluid" <?php echo $title_bg; ?>>
       <div class="container">
           <h1 class="p-heroUnit__title"><?php bzb_title(); ?></h1>
