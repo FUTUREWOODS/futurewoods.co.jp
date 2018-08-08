@@ -24,25 +24,11 @@
 
 <?php }else{ ?>
 <header id="header" class="l-rootHeader js-rootHeader" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-  <?php
-      $logo_image = get_option('logo_image');
-      $logo_text = get_option('logo_text');
-      if( !empty($logo_image) && get_option('toppage_logo_type') == 'logo_image') :
-        $logo_inner = '<img src="'. get_option('logo_image') .'" alt="'.get_bloginfo('name').'" />';
-      else:
-        if (!empty($logo_text) && get_option('toppage_logo_type') == 'logo_text') :
-          $logo_inner = get_option('logo_text');
-        else:
-          $logo_inner = get_bloginfo('name');
-        endif;
-        $logo_inner_desc = '<p class="header-description">'.get_bloginfo('description').'</p>';
-      endif;
-      $logo_wrap = ( is_front_page() || is_home() ) ? 'h1' : 'p' ;
-    ?>
-    <<?php echo $logo_wrap; ?> id="logo" itemprop="headline">
-      <a href="<?php echo home_url(); ?>" class="l-headerImage"><?php echo $logo_inner; ?></a><br />
-    </<?php echo $logo_wrap; ?>>    <!-- start global nav  -->
-    
+   <h1 class="py-3">
+     <a href="/" class="l-headerImage js-headerImage">
+        <img src="<?php echo get_theme_file_uri('dist/fw_logo_003.png'); ?>" alt="FUTUREWOODS">
+     </a>
+   </h1>
     <div id="" class="clearfix">
       
     <?php if( has_nav_menu( 'footer_nav' ) ){ ?>

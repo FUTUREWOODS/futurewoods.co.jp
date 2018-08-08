@@ -3,6 +3,8 @@ import fontawesome from '@fortawesome/fontawesome'
 import solid from '@fortawesome/fontawesome-free-solid'
 import regular from '@fortawesome/fontawesome-free-regular'
 import brands from '@fortawesome/fontawesome-free-brands'
+import './images/fw_logo_001.png'
+import './images/fw_logo_003.png'
 
 fontawesome.library.add(solid)
 fontawesome.library.add(regular)
@@ -38,11 +40,14 @@ $(document).on('change', '.js-category', () => {
 $(document).on('scroll', window, () => {
   const $header = $('.js-rootHeader')
   const heroBottom = 100
+  const $headerImage = $('.js-headerImage')
 
   if($(window).scrollTop() > heroBottom){
+      $headerImage.html('<img src="dist/fw_logo_003.png" alt="FUTUREWOODS" >')
       $header.addClass('l-rootHeader--active');   
   }
   else{
+      $headerImage.html('<img src="dist/fw_logo_001.png" alt="FUTUREWOODS" >')
       $header.removeClass('l-rootHeader--active');   
   }
 })
