@@ -4,7 +4,7 @@
 
       <div class="i-footer">
         <div class="row">
-          <div class="col-5">
+          <div class="col-md-5 col-sm-12">
             <div id="footer-brand-area">
               <div class="footer-logo mb-4">
               <?php
@@ -29,7 +29,7 @@
             </div><!-- /footer-brand-area -->
           </div>
 
-          <div class="col-7">
+          <div class="col-md-7 col-sm-12">
             <div id="footer-content-area" class="row">
               <div id="footer-list-area" class="gr6">
                 <div class="row">
