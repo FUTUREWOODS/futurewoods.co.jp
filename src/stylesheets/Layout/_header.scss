@@ -10,8 +10,22 @@ body {
     }
 
     & #gnav {
-    background: transparent;
 
+      background: transparent;
+      & .standerd {
+        & li.menu-item a {
+          color: #000;
+          &:hover {
+            color: $main-color;
+          }
+        }
+        & ul.sub-menu a {
+          color: $main-color;
+          &:hover {
+            color: #FFF;
+          }
+        }
+      }
       & ul li {
         &:hover a {
           color: $main-color;
@@ -82,8 +96,11 @@ body {
         color: $main-color !important;
       }
     }
-    & .sub-menu li a:hover {
-      color: #FFF !important;
+    & .sub-menu li a {
+        color: $main-color !important;
+      &:hover {
+        color: #FFF !important;
+      }
     }
   }
 }
