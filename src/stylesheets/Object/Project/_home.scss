@@ -149,6 +149,8 @@ body {
   }
 
   &heroUnit {
+    padding: 8rem;
+
     &__title {
       font-size: 30px;
       font-weight: bold;
@@ -162,70 +164,112 @@ body {
   display: flex;
 }
 
-@media screen and ( max-width: 767px ){
-  body.home.color02 {
-    & #main_visual {
-      background-size: cover;
+@media screen and ( max-width: 991px ){
+  body {
+    &.color02 {
+    }
+  }
 
-      & h2 {
-        font-size: 20px;
-        line-height: 30px;
+  article.page {
+    & .post- {
+      &content {
+        padding: initial;
+      }
+    }  
+  }
+
+}
+
+@media screen and ( max-width: 767px ){
+  body {
+    &.home.color02 {
+      & #main_visual {
+        background-size: cover;
+
+        & h2 {
+          font-size: 20px;
+          line-height: 30px;
+        }
       }
     }
-  }
 
-  .p-concept {
-    padding-top: 60px;
-
-    &__text {
-      margin: auto;
-      width: auto;
-      padding: 20px 0;
-      text-align: justify;
-      font-size: 14px;
+    article.page {
+      & .post- {
+        &content {
+          padding: initial;
+        }
+      }
     }
+    
   }
 
-  .p-feature {
-    padding: 60px 0;
+  & .p- {
+    &concept {
+      padding-top: 60px;
 
-    &__lead {
-      width: initial;
+      &__text {
+        margin: auto;
+        width: auto;
+        padding: 20px 0;
+        text-align: justify;
+        font-size: 14px;
+      }
+    }
+
+    &heroUnit {
+      padding: 4rem 0;
       text-align: center;
-      font-size: 14px;
-      padding-bottom: 20px;
     }
 
-    &__text {
-      padding: initial;
-    }    
+    &feature {
+      padding: 60px 0;
 
-    &__line {
-      border-right: initial;
-      border-bottom: 1px solid #fff;
-    }
-
-    &__items {
-      padding: 20px 0;
-    }
-  }
-
-  .p-service {
       &__lead {
-      margin: auto;
-      width: auto;
-      text-align: center;
-      color: #fff;
+        width: initial;
+        text-align: center;
+        font-size: 14px;
+        padding-bottom: 20px;
+      }
+
+      &__text {
+        padding: initial;
+      }    
+
+      &__line {
+        border-right: initial;
+        border-bottom: 1px solid #fff;
+      }
+
+      &__items {
+        padding: 20px 0;
+      }
+    }
+
+    &service {
+        &__lead {
+        margin: auto;
+        width: auto;
+        text-align: center;
+        color: #fff;
+      }
     }
   }
 
   .one-column #content .wrap {
     width: 90%;
     margin: 0 5%;
+
+    & #main {
+      padding: initial;
+    }
   }
 
   body.home .front-loop .popular_post_box .wrap-a {
     border: initial;
+  }
+
+  .pagetop {
+    right: 20px;
   }
 
 }

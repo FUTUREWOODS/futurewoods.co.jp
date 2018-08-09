@@ -8,7 +8,7 @@
   }
 ?>
 <div class="header-space"></div>
-<div class="jumbotron jumbotron-fluid" <?php echo $title_bg; ?>>
+<div class="jumbotron jumbotron-fluid p-heroUnit" <?php echo $title_bg; ?>>
       <div class="container">
           <h1 class="p-heroUnit__title">
             <?php 

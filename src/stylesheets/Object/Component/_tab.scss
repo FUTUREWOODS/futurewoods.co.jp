@@ -5,6 +5,10 @@
     margin: 0 10px;
   }
 
+  & .nav-link {
+    border: initial;
+  }
+
   & .c-tab {
     &__currentMenu {
       border-bottom: solid 3px $main-color;
@@ -22,4 +26,21 @@
       }
     }
   }
+
+}
+
+@media screen and ( max-width: 767px ) {
+  & .nav-link {
+    padding: initial;
+  }
+
+  & .nav-tabs {
+    & .c-tab {
+      &__currentMenu {
+        border-bottom: solid 3px $main-color;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
 }

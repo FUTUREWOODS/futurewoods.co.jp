@@ -14,8 +14,8 @@ body {
     }
 
     & #gnav {
-
       background: transparent;
+      
       & .standerd {
         & li.menu-item a {
           color: #000;
@@ -118,75 +118,98 @@ body {
   }
 }
 
-@media screen and ( max-width: 1200px ){
-  #header-nav-btn {
-    & a {
-      background: #fff;
-    }
+@media screen and ( max-width: 991px ){
+  body {
+    &.color02 {
+      &#header-nav-btn {
+        & a {
+          background: #fff;
+        }
 
-    & i {
-      color: $main-color;
-    } 
-  }
-
-  #gnav-sp #header-cont-content li {
-    & a {
-      &:hover {
-        opacity: 0.5;
+        & i {
+          color: $main-color;
+        } 
       }
 
-      &:before {
-        font-family: initial;
-        content: initial;
-        position: initial;
-        left: initial;
-        top: initial;
-      }
-    }
-  }
+      & #gnav-sp {
+        background: #000;
+        background: rgba(0,0,0,0.8);
 
-  & #gnav-sp {
-    background: #000;
-    background: rgba(0,0,0,0.8);
+        & #header-cont-content li {
+          & a {
+            &:hover {
+              opacity: 0.5;
+            }
+
+            &:before {
+              font-family: initial;
+              content: initial;
+              position: initial;
+              left: initial;
+              top: initial;
+            }
+          }
+        }
+      }
+
+      & #header-nav-btn {
+        display: block;
+        width: auto;
+        margin: 0 20px;
+        line-height: 92px;
+        float: right;
+
+        & a {
+          display: initial;
+          text-align: initial;
+          padding: initial;
+          line-height: initial;
+          background: initial;
+          width: initial;
+        }
+      }
+
+    }
   }
 }
 
-@media screen and ( max-width: 767px ){
-  & #header #logo {
-    width: 200px;
-    margin: 0 15px;
-    vertical-align: middle;
-  }
-  .post-content h2 {
-    margin: 80px 0 32px -30px;
-    padding: 16px 16px 16px 20px;
-  }
+@media screen and ( max-width: 767px ) {
+  body {
+    &.color02 {
+      & #header #logo {
+        width: 200px;
+        margin: 0 15px;
+        vertical-align: middle;
+        padding: 20px 0;
+      }
 
-  & #gnav-sp {
-    background: #000;
-    background: rgba(0,0,0,0.8);
-    text-align: center;
-  }
+      & #gnav-sp {
+        background: #000;
+        background: rgba(0,0,0,0.8);
+        text-align: center;
+      }
 
-  #header-nav-btn {
-    display: block;
-    width: auto;
-    margin: 0 20px;
-    line-height: 92px;
-    float: right;
+      & #header-nav-btn {
+        display: block;
+        width: auto;
+        margin: 0 20px;
+        line-height: 92px;
+        float: right;
 
-    & a {
-      display: initial;
-      text-align: initial;
-      font-size: 25px;
-      padding: initial;
-      line-height: initial;
-      background: initial;
-      width: initial;
-    }
+        & a {
+          display: initial;
+          text-align: initial;
+          font-size: 25px;
+          padding: initial;
+          line-height: initial;
+          background: initial;
+          width: initial;
+        }
 
-    & i {
-      font-size: 32px;
+        & i {
+          font-size: 32px;
+        }
+      }
     }
   }
 }
