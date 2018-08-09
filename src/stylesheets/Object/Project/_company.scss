@@ -65,6 +65,9 @@ body {
 
 
 @media screen and ( max-width: 767px ) {
+  .post-content table {
+    white-space: normal;
+  }
   body {
     & .p-company {
       &__items {
