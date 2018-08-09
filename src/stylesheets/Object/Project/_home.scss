@@ -118,6 +118,14 @@ body {
         background-size: cover;
         margin: auto;
       }
+
+      &--ds {
+        width: 150px;
+        height: 150px;
+        background: url('../images/service_ds.png') no-repeat; 
+        background-size: cover;
+        margin: auto;
+      }
     }
 
     &__wrap {
@@ -168,6 +176,7 @@ body {
 @media screen and ( max-width: 991px ){
   body {
     &.color02 {
+
     }
   }
 
@@ -198,6 +207,10 @@ body {
       & .post- {
         &content {
           padding: initial;
+        }
+
+        &header {
+          padding: 20px 0 !important;
         }
       }
     }

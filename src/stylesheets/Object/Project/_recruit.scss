@@ -1,11 +1,27 @@
 .p-recruit {
   &__items {
-  padding: 40px 0;
+    padding: 40px 0;
+  }
+
+  &__wrap {
+    width: 600px;
+    margin: auto;
   }
 
   &__text {
-  font-size: 14px;
-  line-height: 2;
-  text-align: justify;
+    font-size: 14px;
+    line-height: 2;
+    text-align: justify;
+  }
+}
+
+@media screen and ( max-width: 767px ) {
+  body {
+    & .p-recruit {
+      &__wrap {
+        width: auto;
+        margin: auto;
+      }
+    }
   }
 }

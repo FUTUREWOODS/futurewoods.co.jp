@@ -59,3 +59,18 @@
     margin: auto;
   }
 }
+
+@media screen and ( max-width: 767px ){
+  .p-service {
+    &__figure {
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      width: auto;
+      margin: auto;
+    }
+  }  
+}
+
+

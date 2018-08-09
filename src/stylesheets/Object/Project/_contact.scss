@@ -26,24 +26,35 @@ body {
       font-size: 14px;
       text-align: left;
     }
+
+    &__items {
+      width: 330px;
+      margin: auto;
+    }
   }
 }
 
+
+
 .wpcf7 {
   &c-conf {
-    & input[type="text"],input[type="textarea"],input[type="email"],textarea {
+    & input[type="text"], input[type="textarea"], input[type="email"], input[type="button"], textarea {
       border: initial;
     }
   }
 
-  & input[type="text"],input[type="textarea"],input[type="email"],textarea {
+  & input[type="button"] {
+    @include baseBtn;
+    @include disabledBtn;
+  }
+
+  & input[type="text"], input[type="textarea"], input[type="email"], textarea, .form-control[readonly] {
     background-color: #fff;
     color: #333;
     display: block;
   }
 
   & input[type="submit"] {
-
     @include baseBtn; 
     
     &:hover {
@@ -105,6 +116,28 @@ body {
 span.wpcf7-list-item.first {
   margin:initial;
 }
+
+@media screen and ( max-width: 767px ) {
+  body {
+    & .p-contact {
+      &__content {
+        width: auto;
+        margin: auto;
+      }
+
+      &__items {
+        width: auto;
+        margin: auto;
+      }
+    }
+  }
+}
+
+
+
+
+
+
 
 
 

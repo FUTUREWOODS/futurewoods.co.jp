@@ -27,6 +27,13 @@ body {
           padding: 30px 20px; 
           border: initial;
         }
+
+        & tbody th {
+          background: initial;
+          color: #333;
+          border: none;
+          padding: 30px 10px;
+        }
       }
     }
   }
@@ -53,8 +60,19 @@ tr {
           & td {
             padding: 30px 10px; 
             border: initial;
+            text-align: justify;
+          }
+
+          & tbody th {
+            width: 35%;
+            background: initial;
+            color: #333;
+            border: none;
+            padding: 30px 10px;
           }
         }
+
+
       }
     }
 

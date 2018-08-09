@@ -58,7 +58,7 @@
                 <div class="col-md-6 col-sm-12">
                   <div class="p-feature__wrap">
                     <div class="p-feature__items">
-                      <div class="p-feature__image--fs mb-4"></div>
+                      <div class="p-feature__image--ds mb-4"></div>
                       <h3 class="p-feature__title">データサイエンス事業</h3>
                       <p class="p-feature__text">
                         データ解析コンサルティングやビッグデータ分析業務、各種データ基盤構築等幅広くサポート。
