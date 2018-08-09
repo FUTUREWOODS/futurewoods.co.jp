@@ -1,6 +1,17 @@
 $main-color: #296bcf;
+@font-face {
+  font-family: 'Viga', sans-serif;
+}
+
+.menu-item, h1, h2 {
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-family: 'Viga', sans-serif !important;
+  
+}
 
 body {
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Verdana, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   background-image: none;
   
   &.color02 {
@@ -43,4 +54,7 @@ body {
 
 .header-space {
   height: 92px;
+}
+.fa-angle-right {
+  color: $main-color;
 }
