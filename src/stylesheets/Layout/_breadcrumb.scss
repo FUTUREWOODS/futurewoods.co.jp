@@ -3,6 +3,14 @@ body {
     & .breadcrumb {
       background-color: initial;
       font-size: 12px;
+      font-weight: bold;
+      color: #adadad;
+
+      & li {
+        &:last-child {
+          color: #333;
+        }
+      }
 
       &-area {
       border-bottom: none;
