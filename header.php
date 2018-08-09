@@ -97,8 +97,9 @@
     
     <?php if( has_nav_menu('global_nav') || has_nav_menu('footer_nav') ){ ?>
       
-
-      <div id="header-nav-btn">
+      <div id="header-nav-btn" class="<?php if ($_SERVER["REQUEST_URI"] != "/") {
+        echo "u-headerBar";
+      } ?> ">
         <a href="#"><i class="fas fa-bars"></i></a>
       </div>
       
